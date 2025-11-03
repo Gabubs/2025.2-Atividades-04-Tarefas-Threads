@@ -4,14 +4,15 @@
 # Para executar: make run
 
 CC = gcc
-CFLAGS = -Wall -pthread -lm
+CFLAGS = -Wall -pthread
+LDFLAGS = -lm
 TARGET = atividade_threads
 SOURCE = atividade_threads.c
 
 all: $(TARGET)
 
 $(TARGET): $(SOURCE)
-	$(CC) $(SOURCE) -o $(TARGET) $(CFLAGS)
+	$(CC) $(CFLAGS) $(SOURCE) -o $(TARGET) $(LDFLAGS)
 	@echo "Compilação concluída com sucesso!"
 	@echo "Execute com: ./$(TARGET)"
 

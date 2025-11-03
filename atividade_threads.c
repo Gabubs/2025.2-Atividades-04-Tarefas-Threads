@@ -18,6 +18,8 @@
 #include <string.h>
 
 #define NUM_ITERACOES 1000000
+#define NUM_LINHAS_IO 10000
+#define NUM_ITERACOES_MISTA 100
 #define TAMANHO_BUFFER 1024
 
 // Estrutura para passar dados para as threads
@@ -80,7 +82,7 @@ void* funcao_io(void* arg) {
         pthread_exit(NULL);
     }
     
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < NUM_LINHAS_IO; i++) {
         fprintf(arquivo, "Thread %d - Linha %d: Esta é uma operação de I/O\n", data->thread_id, i);
     }
     fclose(arquivo);
@@ -133,7 +135,7 @@ void* funcao_mista(void* arg) {
     long long total_calculos = 0;
     
     // Alterna entre CPU e I/O
-    for (int iteracao = 0; iteracao < 100; iteracao++) {
+    for (int iteracao = 0; iteracao < NUM_ITERACOES_MISTA; iteracao++) {
         // Parte CPU: Cálculo de fatorial
         long long fatorial = 1;
         for (int i = 1; i <= 20; i++) {

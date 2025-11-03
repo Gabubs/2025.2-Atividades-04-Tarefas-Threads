@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e  # Exit immediately if a command exits with a non-zero status
+
 # Script auxiliar para executar a atividade de threads
 
 # Cores para output
