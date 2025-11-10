@@ -121,11 +121,9 @@ _[Se as operações fossem executadas sequencialmente, elas seriam realizadas um
 
 Liste os principais conceitos de sistemas operacionais que você compreendeu melhor com esta atividade:
 
-1. _[Ex: Concorrência e paralelismo]_
-2. _[Ex: Diferença entre operações CPU-bound e I/O-bound]_
-3. _[Ex: Uso da biblioteca pthread]_
-4. _[...]_
-
+1. _no paralelismo, elas realmente ocorrem ao mesmo tempo, aproveitando múltiplos núcleos do processador._
+2. _na concorrência, várias tarefas progridem alternadamente_
+(foi isso que eu entedi)
 ---
 
 ## Dificuldades Encontradas
